@@ -8,11 +8,11 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Book</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password"></property>
-        <property name="hibernate.connection.pool_size">1</property>
+        <property name="hibernate.connection.pool_size">100</property>
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
         <mapping class="com.hibernate.hibernate.dto.UserDetails"/>
     </session-factory>
 </hibernate-configuration>
