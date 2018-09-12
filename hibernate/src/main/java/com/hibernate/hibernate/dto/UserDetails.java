@@ -1,7 +1,5 @@
 package com.hibernate.hibernate.dto;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,9 +12,7 @@ public class UserDetails {
 	
 	private int userId;
 	private String userName;
-	private Date joinedDate;
-	private String address;
-	private String description;
+	private Address address; 
 	
 	@Id
 	@Column(name="USER_ID")
@@ -32,24 +28,7 @@ public class UserDetails {
 		return userName;
 	}
 	public void setUserName(String userName) {
-		this.userName = userName;
-    }
-	public Date getJoinedDate() {
-		return joinedDate;
+		this.userName =  userName;
 	}
-	public void setJoinedDate(Date joinedDate) {
-		this.joinedDate = joinedDate;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
+
 }
