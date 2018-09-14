@@ -14,6 +14,8 @@ public class UserDetails {
 	private String userName;
 	private Address address; 
 	
+	
+	
 	@Id
 	@Column(name="USER_ID")
 	@GeneratedValue
@@ -30,5 +32,11 @@ public class UserDetails {
 	public void setUserName(String userName) {
 		this.userName =  userName;
 	}
-
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	
 }

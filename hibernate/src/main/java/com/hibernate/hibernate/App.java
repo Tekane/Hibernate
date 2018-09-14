@@ -17,26 +17,22 @@ public class App
     public static void main( String[] args )
     {
        UserDetails user  = new UserDetails();
+       
        user.setUserName("Kgodisho");
-       
-       
-       Address address = new  Address("Lydes","Pretoria");
+       Address address = new Address();
+       address.setCity("Pretoria");
+       address.setStreet("Leyds");
       
        
+       user.setAddress(address);
        SessionFactory  sessionFactory  = new Configuration().configure().buildSessionFactory();
        Session session =  sessionFactory.openSession();
        session.beginTransaction();
+       
        session.save(user);
        session.getTransaction().commit();
        session.close();
-       
-       user = null;
-       
-       session = sessionFactory.openSession();
-       session.beginTransaction();
-       user = (UserDetails) session.get(UserDetails.class, 5);
-       System.out.println("User name "+user.getUserName());
-       
+          
  
     }
 }
